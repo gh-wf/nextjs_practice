@@ -42,7 +42,7 @@ const getProperties = async() => {
 
 const Home = async () => {
     const properties = await getProperties()
-    console.log(properties)
+    //console.log(properties)
 
   return (
    <> 
