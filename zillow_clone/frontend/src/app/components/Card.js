@@ -19,6 +19,11 @@ const Card = ({
                     width={300}
                     height={150}
                 />
+                <div className='text-container'>
+                    <h3>${rentalPrice}/month</h3>
+                    <h3>{beds} beds</h3>
+                    <p>{propertyName}</p>
+                </div>
             </div>
         </Link>
     )
