@@ -53,6 +53,7 @@ main {
 
 article {
   width: 50vw;
+  height: 90vh;
 }
 
 article.listings {

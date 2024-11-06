@@ -48,7 +48,8 @@ const getProperty = async(slug) => {
 
 
 const Property = async ({params}) => {
-    const property = await getProperty(params.slug)
+    const resolvedParams = await params
+    const property = await getProperty(resolvedParams.slug)
 
     //console.log(property)
     return (

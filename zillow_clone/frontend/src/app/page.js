@@ -1,7 +1,5 @@
 import NavBar from "./components/NavBar"
-import SearchBar from "./components/SearchBar"
-import Map from "./components/Map"
-import Card from "./components/Card"
+import Grid from "./components/Grid"
 
 const getProperties = async() => {
   const HYGRAPH_ENDPOINT = process.env.HYGRAPH_ENDPOINT
@@ -48,25 +46,8 @@ const Home = async () => {
   return (
    <> 
       <NavBar/>
-      <SearchBar/>
-      <main>
-        <article>
-          <Map locations={locations}/>
-        </article>
-        <article className="listings">
-          <h2>Rental Listings</h2>
-          <div className="card-container">
-             {properties.map(property => <Card
-                key={property.id}
-                propertyName={property.name}
-                slug={property.slug}
-                rentalPrice={property.rentalPrice}
-                beds={property.beds}
-                image={property.images[0]}
-             />)}
-          </div>
-        </article>
-      </main>
+      <Grid properties={properties}/>
+      
    </>
   );
 }
